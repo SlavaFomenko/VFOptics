@@ -1,0 +1,11 @@
+.user_menu_wrapepr{
+    top:100px;
+
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    right: 20px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 20px;
+}
