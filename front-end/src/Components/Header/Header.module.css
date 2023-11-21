@@ -18,6 +18,8 @@
     gap: 15px;
 }
 
+
+
 .logo_image {
     width: 70px;
     height: 70px;
@@ -55,7 +57,11 @@
     list-style: none;
     gap: 120px;
 }
-
+.user{
+    height: 40%;
+    display: flex;
+    align-items: center;
+}
 .user,.user a {
     width: auto;
     color: white;
@@ -64,3 +70,20 @@
 .user > span,a{
     cursor: pointer;
 }
+
+.user_info_wrapper{
+    /*width: auto;*/
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.menu_btn_icon_wrapper{
+    height: 100%;
+    width: 40px;
+    background-image: url("../../images/header/menu.png");
+    background-size: cover ;
+    cursor: pointer;
+}
+
+
