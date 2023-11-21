@@ -31,7 +31,7 @@ function Header({setRegisterIsOpen}) {
                             <a href={'/login'}>Login</a>}
                     </div>
                 </header>
-    );
+
 }
 
 export default Header;
