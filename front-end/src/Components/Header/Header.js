@@ -12,11 +12,11 @@ function Header({setRegisterIsOpen}) {
     const menuBtn = useRef()
 
     const documentClickHandler = (e) =>{
-        console.log(e.target)
-        console.log((menuBtn.current !== e.target))
-        console.log(menuRef.current && !menuRef.current.contains(e.target))
+        // console.log(e.target)
+        // console.log((menuBtn.current !== e.target))
+        // console.log(menuRef.current && !menuRef.current.contains(e.target))
         if (e.target !== menuBtn.current && menuRef.current && !menuRef.current.contains(e.target)) {
-            console.log('hello')
+            // console.log('hello')
             setMenuVIsible(false)
         }
     }
@@ -26,7 +26,7 @@ function Header({setRegisterIsOpen}) {
         return(()=>document.removeEventListener('click',documentClickHandler))
     }, []);
 
-    console.log( 'state = ' +menuVisible)
+    // console.log( 'state = ' +menuVisible)
     const context = useContext(UserContext)
     const navigate = useNavigate()
     return (

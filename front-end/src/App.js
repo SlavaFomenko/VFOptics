@@ -1,7 +1,7 @@
 
 import styles from './App.module.css'
 import UserContext from "./Context/UserContext";
-import {useState} from "react";
+import {Profiler, useState} from "react";
 import {Route, Routes} from 'react-router-dom';
 import Login from "./Components/Authorization/Login/Login";
 import Registration from "./Components/Authorization/Registration/Registration";
@@ -9,6 +9,8 @@ import {HomePage} from "./Components/HomePage/HomePage";
 import Header from "./Components/Header/Header";
 import StorePage from "./Components/StorePage/StorePage";
 import AboutPage from "./Components/AboutPage/AboutPage";
+import BasketPage from "./Components/BasketPage/BasketPage";
+import ProfilePage from "./Components/ProfilPage/ProfilePage";
 // import
 
 function App() {
@@ -19,13 +21,17 @@ function App() {
     // const [registerIsOpen,setRegisterIsOpen] = useState(false)
     const successAuthorization = (user) =>{
         setUser(user)
-        // setRegisterIsOpen(false)
+    }
+    const logOut = ()=>{
+        console.log('log out')
+        setUser(false)
+            window.location.reload();
     }
 
 
   return (
     <div className={styles.app}>
-        <UserContext.Provider value={{user:user,successAuthorization}}>
+        <UserContext.Provider value={{user:user,successAuthorization,logOut}}>
             { window.location.pathname !== '/login' && window.location.pathname!=='/registration'? <Header/>:''}
             <Routes>
                 <Route path={'/'} element={<HomePage/>} />
@@ -33,6 +39,8 @@ function App() {
                 <Route path={'/about'} element={<AboutPage/>}/>
                 <Route path={'/login'} element={<Login />}/>
                 <Route path={'/registration'} element={<Registration/>}/>
+                <Route path={'/basket'} element={<BasketPage/>}/>
+                <Route path={'/profile'} element={<ProfilePage/>}/>
 
             </Routes>
         </UserContext.Provider>
