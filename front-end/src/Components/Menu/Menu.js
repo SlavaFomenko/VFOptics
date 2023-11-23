@@ -10,11 +10,7 @@ const Menu = ({refs, onHideMenu }) => {
 
     useEffect(() => {
         const documentClickHandler = (e) => {
-            // console.log(e.target )
-            // console.log(refs.menuBtn)
-            // console.log('info = ' + refs.menuBtn !== e.target)
             if (refs.menuBtn.current !== e.target&& refs.menuRef.current && !refs.menuRef.current.contains(e.target)) {
-                // console.log('hello me')
                 onHideMenu();
             }
         };
@@ -32,6 +28,7 @@ const Menu = ({refs, onHideMenu }) => {
             <ul>
                 <li onClick={()=>navigate('/basket')}><a>Корзина</a></li>
                 <li onClick={()=>navigate('/profile')}><a>Профіль</a></li>
+                {context.user.role === 'admin'?<li onClick={()=>navigate('/admin_panel')}><a>Адмін панель</a></li>:''}
                 <li onClick={()=>{context.logOut()}}>Вихід</li>
             </ul>
         </nav>

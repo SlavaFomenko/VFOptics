@@ -1,0 +1,33 @@
+.admin_panel_wrapper{
+    display: flex;
+}
+
+
+
+.sidebar_wrapper{
+    width: 20%;
+    border-right:2px solid black ;
+    display: flex;
+    justify-content: center;
+ }
+
+.sidebar_wrapper ul {
+    list-style: none;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar_wrapper ul li{
+    padding:10px 15px ;
+    border: 1px solid black;
+    border-radius: 150px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.sidebar_wrapper ul li:hover{
+    background-color: black;
+    color: white;
+}
+

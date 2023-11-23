@@ -1,0 +1,26 @@
+.add_section_wrapper{
+    width: 80%;
+    height:100%;
+    padding:50px 20px;
+    /*background-color: green;*/
+}
+.add_section_wrapper h2{
+    margin:20px 0;
+}
+
+.className_form{
+    display: flex;
+    /*flex-direction: column;*/
+    gap: 20px;
+}
+.className_form > *{
+    width: 300px;
+    padding: 5px;
+    font-size: 120%;
+}
+
+/*.className_form textarea{*/
+/*    max-width: 500px;*/
+/*    min-width: 300px;*/
+/*    max-height:400px ;*/
+/*}*/

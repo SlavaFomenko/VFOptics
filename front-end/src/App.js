@@ -11,13 +11,20 @@ import StorePage from "./Components/StorePage/StorePage";
 import AboutPage from "./Components/AboutPage/AboutPage";
 import BasketPage from "./Components/BasketPage/BasketPage";
 import ProfilePage from "./Components/ProfilPage/ProfilePage";
+import AdminPanelPage from "./Components/AdminPanelPage/AdminPanelPage";
 // import
 
 function App() {
 
-    console.log(window.location.pathname)
+    // console.log(window.location.pathname)
 
-    const [user,setUser]=useState(false)
+    const [user,setUser]=useState(
+        {
+            customer_id: "admin", first_name: "Viacheslav",
+            last_name: "Fomenko",
+            password: "909011", role: "admin",
+            tel_number: "969073576"}
+    )
     // const [registerIsOpen,setRegisterIsOpen] = useState(false)
     const successAuthorization = (user) =>{
         setUser(user)
@@ -41,7 +48,7 @@ function App() {
                 <Route path={'/registration'} element={<Registration/>}/>
                 <Route path={'/basket'} element={<BasketPage/>}/>
                 <Route path={'/profile'} element={<ProfilePage/>}/>
-
+                <Route path={'/admin_panel'}  element={<AdminPanelPage/>}/>
             </Routes>
         </UserContext.Provider>
     </div>

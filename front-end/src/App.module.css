@@ -5,3 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.app main{
+    width: 100%;
+    min-height: calc(100% - 100px);
+}
