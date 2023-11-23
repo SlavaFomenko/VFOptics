@@ -55,6 +55,19 @@ app.post('/check/user/validate',(req, res)=>{
     })
 })
 
+app.get('/get_all_categories', (req, res) => {
+    const sqlQuery = 'SELECT * FROM Categories'; // Используйте заглавные буквы для SQL-команд, это общепринятая практика
+
+    connection.query(sqlQuery, (err, result) => {
+        if (err) {
+            console.error(err); // Вместо console.log используйте console.error для отображения ошибок
+            res.statusCode = 404;
+            res.json({messege:"Category not found"})
+        } else {
+            res.json(result);
+        }
+    });
+});
 
 
 
